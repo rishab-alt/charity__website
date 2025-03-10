@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -23,11 +24,11 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0b4ea2", // Slovak flag blue
+          DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#ee1c25", // Slovak flag red
+          DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
@@ -49,6 +50,16 @@ module.exports = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        slovak: {
+          blue: {
+            DEFAULT: "#0b4ea2",
+            dark: "#0a3d7a",
+          },
+          red: {
+            DEFAULT: "#ee1c25",
+            dark: "#c81820",
+          },
         },
       },
       borderRadius: {

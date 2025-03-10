@@ -82,7 +82,7 @@ export default function ProjectsPage() {
                     <div className="flex justify-between items-center">
                       <span className="text-sm text-gray-500">{project.location}</span>
                       <Link href={`/projects/${project.id}`} className="text-[#ee1c25] font-medium flex items-center">
-                        Learn more <ArrowRight className="ml-1 h-4 w-4" />
+                        Learn More <ArrowRight className="ml-1 h-4 w-4" />
                       </Link>
                     </div>
                   </div>
