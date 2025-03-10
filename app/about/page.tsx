@@ -2,7 +2,7 @@ import Image from "next/image"
 import PageHeader from "@/components/page-header"
 import NewsletterSection from "@/components/newsletter-section"
 import { CheckCircle } from "lucide-react"
-import aboutImage from '../images/pexels-photo-30928559.webp'
+import childrenSmiling from '../images/free-photo-of-young-girls-in-traditional-dress-in-rice-field.jpeg'
 
 export default function AboutPage() {
   return (
@@ -10,9 +10,10 @@ export default function AboutPage() {
 
       <PageHeader title="About Us" description="Learn about our mission, vision, and the team behind SlovakAid"
 
+      
+
       />
-
-
+  
       {/* Mission & Vision */}
       <section className="py-16">
         <div className="container">
@@ -48,7 +49,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src={aboutImage}
+                src={childrenSmiling}
                 alt="Our mission in action"
                 fill
                 className="object-cover"
