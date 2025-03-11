@@ -20,8 +20,14 @@ export default function DonatePage() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-[#0b4ea2]">Make a Donation</h2>
               <p className="text-gray-600 mb-6">
-                Your contribution, no matter how small, can make a significant difference in someone's life. All
-                donations are tax-deductible and go directly to our projects.
+                Your contribution helps us:
+                <ul>
+                  <li>Provide affordable Slovak language classes for children and adults.</li>
+                  <li>Organise cultural events, workshops, and community activities.</li>
+                  <li>Develop educational resources for our students.</li>
+                  <li>Offer support and guidance for Slovak families in the UK.</li>
+                </ul>
+                Every donation, no matter the amount, makes a real difference in ensuring that Slovak heritage thrives abroad.
               </p>
 
               <div className="space-y-6 mb-8">
@@ -205,14 +211,9 @@ export default function DonatePage() {
                 <div className="text-center text-sm text-gray-500">
                   <p>
                     By donating, you agree to our{" "}
-                    <a href="#" className="text-[#0b4ea2] hover:underline">
-                      Terms of Service
-                    </a>{" "}
-                    and{" "}
-                    <a href="#" className="text-[#0b4ea2] hover:underline">
+                    <a href="/privacy-policy" className="text-[#0b4ea2]">
                       Privacy Policy
                     </a>
-                    .
                   </p>
                 </div>
               </form>
@@ -220,97 +221,6 @@ export default function DonatePage() {
           </div>
         </div>
       </section>
-
-      {/* Other Ways to Give */}
-      <section className="py-16 bg-gray-50">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#0b4ea2]">Other Ways to Give</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              There are many ways to support our mission beyond one-time donations.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Monthly Giving",
-                description:
-                  "Become a sustaining donor by setting up a monthly donation. This provides us with reliable funding to plan long-term projects.",
-                buttonText: "Set Up Monthly Donation",
-              },
-              {
-                title: "Corporate Partnerships",
-                description:
-                  "Partner with us as a business to make a bigger impact. We offer various partnership opportunities for companies of all sizes.",
-                buttonText: "Become a Partner",
-              },
-              {
-                title: "Legacy Giving",
-                description:
-                  "Leave a lasting impact by including SlovakAid in your will or estate planning. Your legacy will continue to change lives.",
-                buttonText: "Learn About Legacy Giving",
-              },
-            ].map((way, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-xl font-bold mb-3">{way.title}</h3>
-                <p className="text-gray-600 mb-6">{way.description}</p>
-                <Button variant="outline" className="w-full">
-                  {way.buttonText}
-                </Button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-16">
-        <div className="container max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#0b4ea2]">Frequently Asked Questions</h2>
-            <p className="text-gray-600">Have questions about donating? Find answers to common questions below.</p>
-          </div>
-          <div className="space-y-6">
-            {[
-              {
-                question: "Is my donation tax-deductible?",
-                answer:
-                  "Yes, SlovakAid is a registered nonprofit organization, and all donations are tax-deductible to the extent allowed by law. You will receive a receipt for your donation that you can use for tax purposes.",
-              },
-              {
-                question: "How is my donation used?",
-                answer:
-                  "90% of all donations go directly to our projects, with only 10% used for administrative costs. We're committed to transparency and publish annual reports detailing how funds are used.",
-              },
-              {
-                question: "Can I specify which project my donation supports?",
-                answer:
-                  "Yes, you can specify which project you'd like to support in the message field of the donation form. If no project is specified, your donation will be directed to where it's needed most.",
-              },
-              {
-                question: "Is my payment information secure?",
-                answer:
-                  "Yes, we use industry-standard encryption and security measures to protect your payment information. We do not store your credit card details on our servers.",
-              },
-              {
-                question: "How do I cancel or change my monthly donation?",
-                answer:
-                  "You can cancel or change your monthly donation at any time by contacting us at donations@slovakaid.org or by calling us at +421 2 123 4567.",
-              },
-            ].map((faq, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-lg font-bold mb-2">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <p className="text-gray-600 mb-4">Still have questions? Contact our donor support team.</p>
-            <Button className="bg-[#0b4ea2] hover:bg-[#093d81] text-white">Contact Donor Support</Button>
-          </div>
-        </div>
-      </section>
     </>
   )
 }
-

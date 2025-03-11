@@ -27,13 +27,10 @@ export default function SchoolPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-[#0b4ea2]">Our Approach</h2>
               <p className="text-gray-600 mb-4">
-                Our Slovak language school offers a comprehensive approach to language learning, combining traditional
-                teaching methods with modern, interactive techniques. We focus on developing all four language skills:
-                speaking, listening, reading, and writing.
+                At Slovenské Vzdelávacie Centrum – South Manchester, we are proud to be qualified educators with extensive experience across various educational settings. Our goal is to provide a student-centred, engaging, and culturally enriching learning environment, where language learning goes hand in hand with cultural education.
               </p>
               <p className="text-gray-600 mb-6">
-                Classes are taught by native Slovak speakers with extensive teaching experience. Our small class sizes
-                ensure personalized attention and maximum speaking practice for each student.
+                We believe that language and culture are inseparable, which is why our curriculum aligns with our cultural events and workshops. This approach ensures that students not only learn Slovak in the classroom but also experience it in real-life situations.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -41,7 +38,7 @@ export default function SchoolPage() {
                   <div>
                     <h3 className="font-bold mb-1">Immersive Learning</h3>
                     <p className="text-gray-600">
-                      Full immersion in Slovak language and culture through authentic materials and activities.
+                      Language learning integrated with Slovak culture, history, and traditions. Students experience the language in real-life situations through cultural events and workshops.
                     </p>
                   </div>
                 </div>
@@ -50,8 +47,7 @@ export default function SchoolPage() {
                   <div>
                     <h3 className="font-bold mb-1">Practical Focus</h3>
                     <p className="text-gray-600">
-                      Emphasis on practical, everyday language use that you can immediately apply in real-life
-                      situations.
+                      Emphasis on practical, everyday language use that you can immediately apply in real-life situations through task-based learning and group activities.
                     </p>
                   </div>
                 </div>
@@ -60,7 +56,7 @@ export default function SchoolPage() {
                   <div>
                     <h3 className="font-bold mb-1">Cultural Integration</h3>
                     <p className="text-gray-600">
-                      Language learning integrated with Slovak culture, history, and traditions.
+                      Students not only learn Slovak language but also get a deep connection to the culture through content and language integrated learning (CLIL).
                     </p>
                   </div>
                 </div>
@@ -69,7 +65,7 @@ export default function SchoolPage() {
                   <div>
                     <h3 className="font-bold mb-1">Supportive Environment</h3>
                     <p className="text-gray-600">
-                      A friendly, encouraging atmosphere where mistakes are seen as part of the learning process.
+                      A friendly, encouraging atmosphere where mistakes are seen as part of the learning process, ensuring active participation and communication.
                     </p>
                   </div>
                 </div>
@@ -86,6 +82,7 @@ export default function SchoolPage() {
           </div>
         </div>
       </section>
+
 
       {/* Dates and Fees Section */}
       <section className="py-16 bg-gray-50">
@@ -445,16 +442,17 @@ export default function SchoolPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-[#0b4ea2]">Payment Details</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We offer several convenient payment methods. Please use your full name as the payment reference.
+              We offer several convenient payment methods. Please use your full name as the payment reference to avoid delays.
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Bank Transfer Card */}
               <Card className="border border-gray-200">
                 <CardHeader>
                   <CardTitle>Bank Transfer</CardTitle>
-                  <CardDescription>Make a direct transfer to our bank account</CardDescription>
+                  <CardDescription>Make a direct transfer to our bank account.</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
@@ -487,16 +485,16 @@ export default function SchoolPage() {
                 </CardFooter>
               </Card>
 
+              {/* Online Payment Card */}
               <Card className="border border-gray-200">
                 <CardHeader>
                   <CardTitle>Online Payment</CardTitle>
-                  <CardDescription>Pay securely online with credit card or PayPal</CardDescription>
+                  <CardDescription>Pay securely online with credit card or PayPal.</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <p className="text-gray-600">
-                      After submitting your registration form, you will receive an email with a payment link. You can
-                      pay securely online using:
+                      After submitting your registration form, you will receive an email with a payment link. You can pay securely online using:
                     </p>
                     <div className="flex justify-center gap-4">
                       <div className="bg-gray-100 p-2 rounded-md">
@@ -517,6 +515,7 @@ export default function SchoolPage() {
               </Card>
             </div>
 
+            {/* Payment Policies Section */}
             <div className="mt-8 bg-white p-6 rounded-lg border border-gray-200">
               <h3 className="text-xl font-bold mb-4">Payment Policies</h3>
               <ul className="space-y-2">
@@ -529,20 +528,20 @@ export default function SchoolPage() {
                 <li className="flex items-start gap-2">
                   <Info className="h-5 w-5 text-[#0b4ea2] mt-0.5 flex-shrink-0" />
                   <span>
-                    Payment in two installments is available upon request (50% before the course starts, 50% at the
-                    midpoint).
+                    Payment in two installments is available upon request (50% before the course starts, 50% at the midpoint).
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Info className="h-5 w-5 text-[#0b4ea2] mt-0.5 flex-shrink-0" />
                   <span>
-                    Cancellations made more than 14 days before the course start date are eligible for a full refund
-                    minus a €30 administration fee.
+                    Cancellations made more than 14 days before the course start date are eligible for a full refund minus a €30 administration fee.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Info className="h-5 w-5 text-[#0b4ea2] mt-0.5 flex-shrink-0" />
-                  <span>Cancellations made 7-14 days before the course start date are eligible for a 50% refund.</span>
+                  <span>
+                    Cancellations made 7-14 days before the course start date are eligible for a 50% refund.
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Info className="h-5 w-5 text-[#0b4ea2] mt-0.5 flex-shrink-0" />
@@ -556,14 +555,14 @@ export default function SchoolPage() {
         </div>
       </section>
 
+
       {/* SEN (Special Educational Needs) Section */}
       <section className="py-16">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-[#0b4ea2]">Special Educational Needs</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We are committed to making our language courses accessible to all learners, including those with special
-              educational needs.
+              We are committed to making our language courses accessible to all learners, including those with special educational needs.
             </p>
           </div>
 
@@ -571,9 +570,7 @@ export default function SchoolPage() {
             <div>
               <h3 className="text-xl font-bold mb-4">Our Support Approach</h3>
               <p className="text-gray-600 mb-6">
-                We believe that everyone should have the opportunity to learn Slovak, regardless of their learning
-                differences or disabilities. Our teachers are trained to adapt their teaching methods to accommodate
-                various learning needs.
+                We believe that everyone should have the opportunity to learn Slovak, regardless of their learning differences or disabilities. Our teachers are trained to adapt their teaching methods to accommodate various learning needs.
               </p>
 
               <div className="space-y-4">
@@ -600,8 +597,7 @@ export default function SchoolPage() {
                   <div>
                     <h4 className="font-bold mb-1">Flexible Assessment</h4>
                     <p className="text-gray-600">
-                      Assessment methods can be adapted to suit individual needs, with additional time or alternative
-                      formats available.
+                      Assessment methods can be adapted to suit individual needs, with additional time or alternative formats available.
                     </p>
                   </div>
                 </div>

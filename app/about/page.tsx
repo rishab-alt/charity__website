@@ -10,10 +10,10 @@ export default function AboutPage() {
 
       <PageHeader title="About Us" description="Learn about our mission, vision, and the team behind SlovakAid"
 
-      
+
 
       />
-  
+
       {/* Mission & Vision */}
       <section className="py-16">
         <div className="container">
@@ -59,190 +59,174 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our History */}
-      <section className="py-16 bg-gray-50">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#0b4ea2]">Our History</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              From humble beginnings to a nationwide organization, our journey has been driven by a passion to serve.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-12">
-              {[
-                {
-                  year: "2010",
-                  title: "Foundation",
-                  description:
-                    "SlovakAid was founded by a group of passionate individuals who wanted to make a difference in their local communities.",
-                },
-                {
-                  year: "2013",
-                  title: "First Major Project",
-                  description:
-                    "Launched our first major educational initiative, providing resources to 10 schools in eastern Slovakia.",
-                },
-                {
-                  year: "2016",
-                  title: "Expansion",
-                  description:
-                    "Expanded our operations to include healthcare initiatives and opened our second office in Košice.",
-                },
-                {
-                  year: "2019",
-                  title: "International Recognition",
-                  description:
-                    "Received international recognition for our work and began collaborating with organizations across Europe.",
-                },
-                {
-                  year: "2022",
-                  title: "Today",
-                  description:
-                    "Currently operating 24 active projects across Slovakia and neighboring countries, impacting thousands of lives.",
-                },
-              ].map((milestone, index) => (
-                <div key={index} className="flex gap-6">
-                  <div className="flex-shrink-0 w-24 text-center">
-                    <div className="inline-block rounded-full bg-[#0b4ea2] text-white px-3 py-1 font-bold">
-                      {milestone.year}
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">{milestone.title}</h3>
-                    <p className="text-gray-600">{milestone.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Our Team */}
       <section className="py-16">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-[#0b4ea2]">Our Team</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Meet the dedicated individuals who work tirelessly to fulfill our mission.
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Meet the passionate individuals who drive our mission forward. Each member brings unique expertise, dedication, and vision to ensure we provide the best support to our community.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                name: "Martina Kováčová",
-                role: "Executive Director",
-                bio: "With over 15 years of experience in the nonprofit sector, Martina leads our organization with passion and vision.",
-                image: "/placeholder.svg?height=300&width=300",
-              },
-              {
-                name: "Peter Novák",
-                role: "Operations Director",
-                bio: "Peter ensures that our projects are executed efficiently and effectively, maximizing our impact.",
-                image: "/placeholder.svg?height=300&width=300",
-              },
-              {
-                name: "Jana Horváthová",
-                role: "Programs Manager",
-                bio: "Jana develops and oversees our educational and healthcare initiatives across Slovakia.",
-                image: "/placeholder.svg?height=300&width=300",
-              },
-              {
-                name: "Tomáš Balog",
-                role: "Fundraising Manager",
-                bio: "Tomáš builds relationships with donors and partners to secure the resources needed for our work.",
-                image: "/placeholder.svg?height=300&width=300",
-              },
-            ].map((member, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100">
-                <div className="relative h-64">
-                  <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-[#0b4ea2] font-medium mb-3">{member.role}</p>
-                  <p className="text-gray-600">{member.bio}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Our Values */}
-      <section className="py-16 bg-gray-50">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#0b4ea2]">Our Values</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              These core principles guide everything we do at SlovakAid.
-            </p>
+          {/* Leadership Team */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-[#0b4ea2] text-center mb-6">Leadership Team</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "Mgr. Mária Mušutová",
+                  role: "Co-Founder | Chair of the Charity | Trustee | Curriculum & Slovak Language Teaching Developer | Lead Teacher (AM Sessions)",
+                  bio: "Originally from the Orava region in Slovakia, Mária has lived in Manchester for 17 years and holds a PGCE in Modern Foreign Languages from Manchester Metropolitan University. She teaches Spanish and French at a secondary school while also offering private Slovak lessons and translation services.",
+                  quote: "Slovenské Vzdelávacie Centrum - South Manchester allows us to unite the Slovak community, share educational and cultural opportunities, and build lifelong friendships with those who cherish our traditions.",
+                  responsibilities: [
+                    "Chairing the charity and overseeing its development",
+                    "Developing the Slovak language curriculum for all age groups",
+                    "Leading and teaching the AM session for mixed-ability students (ages 4+ to adults)",
+                    "Managing administrative tasks and charity operations",
+                    "Organising cultural events, trips, and workshops",
+                  ],
+                  image: "/images/maria.jpg",
+                },
+                {
+                  name: "Mgr. Denisa Amini",
+                  role: "Co-Founder | Trustee | Advisor for Families Moving to Slovakia | International School Educator & Project Coordinator",
+                  bio: "Originally from Prešov, Denisa lived in Manchester for nearly 20 years before moving back to Slovakia, where she now works at an International School in Košice. With a degree in History and Civics Education, she bridges the Slovak and UK education systems.",
+                  quote: "I believe that Slovenské Vzdelávacie Centrum - South Manchester is more than just a school—it's a place where we can connect, support one another, and celebrate the traditions that are important for us and our children.",
+                  responsibilities: [
+                    "Advising families preparing to return to Slovakia",
+                    "Supporting students transitioning between Slovak and UK education systems",
+                    "Developing partnerships with Slovak schools and institutions",
+                    "Creating projects that connect Slovak students abroad with schools in Slovakia",
+                    "Introducing Slovak history in an engaging way",
+                  ],
+                  image: "/images/denisa.jpg",
+                },
+                {
+                  name: "Ingrid Harandza",
+                  role: "Co-Founder | Trustee | Early Years Educator | SEN Specialist | Creative & Cultural Programs",
+                  bio: "Born in Rimavská Sobota, Ingrid has lived in Manchester for over 20 years. She is a qualified Early Years Educator and works as a teaching assistant in a UK primary school, focusing on young learners.",
+                  quote: "I am excited that Slovenské Vzdelávacie Centrum - South Manchester allows me to combine my two passions—working with children and preserving our Slovak heritage—into a meaningful and supportive space for our community.",
+                  responsibilities: [
+                    "Providing specialized support for SEN students",
+                    "Teaching Slovak to young children through play, music, and movement",
+                    "Leading creative, literary, and sports activities",
+                    "Organizing cultural events that bring Slovak traditions to life",
+                  ],
+                  image: "/images/ingrid.jpg",
+                },
+              ].map((member, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
+                  <div className="relative h-64">
+                    <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+                  </div>
+                  <div className="p-6 text-center">
+                    <h3 className="text-xl font-bold text-[#0b4ea2]">{member.name}</h3>
+                    <p className="text-gray-600 font-medium mb-3">{member.role}</p>
+                    <p className="text-gray-600 text-sm">{member.bio}</p>
+                    <ul className="text-gray-600 text-sm text-left mt-4">
+                      {member.responsibilities.map((task, i) => (
+                        <li key={i} className="flex items-start">
+                          <span className="text-[#0b4ea2] font-bold mr-2">•</span> {task}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="italic text-gray-500 mt-4">"{member.quote}"</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Integrity",
-                description:
-                  "We are committed to transparency, accountability, and ethical practices in all our operations.",
-              },
-              {
-                title: "Compassion",
-                description:
-                  "We approach our work with empathy and a genuine desire to improve the lives of those we serve.",
-              },
-              {
-                title: "Innovation",
-                description:
-                  "We constantly seek new and better ways to address challenges and create sustainable solutions.",
-              },
-              {
-                title: "Collaboration",
-                description: "We believe in the power of partnerships and working together to achieve greater impact.",
-              },
-              {
-                title: "Respect",
-                description:
-                  "We honor the dignity, culture, and autonomy of every individual and community we work with.",
-              },
-              {
-                title: "Excellence",
-                description: "We strive for the highest standards of quality and professionalism in everything we do.",
-              },
-            ].map((value, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-xl font-bold mb-3 text-[#0b4ea2]">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
-              </div>
-            ))}
+
+          {/* Support Team */}
+          <div>
+            <h3 className="text-2xl font-bold text-[#0b4ea2] text-center mb-6">Support Team</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "Zuzana Hanuliaková",
+                  role: "Volunteer | Teaching Assistant | Social Media Coordinator",
+                  bio: "Zuzana is a dedicated volunteer and mother of three, deeply passionate about Slovak culture and education. She plays a vital role in supporting teachers and students in the classroom, ensuring lessons run smoothly.",
+                  responsibilities: [
+                    "Assisting teachers and students in lessons as a teaching assistant",
+                    "Managing social media content to keep families informed and engaged",
+                    "Helping coordinate events and activities",
+                  ],
+                  image: "/images/zuzana.jpg",
+                },
+              ].map((member, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
+                  <div className="relative h-64">
+                    <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+                  </div>
+                  <div className="p-6 text-center">
+                    <h3 className="text-xl font-bold text-[#0b4ea2]">{member.name}</h3>
+                    <p className="text-gray-600 font-medium mb-3">{member.role}</p>
+                    <p className="text-gray-600 text-sm">{member.bio}</p>
+                    <ul className="text-gray-600 text-sm text-left mt-4">
+                      {member.responsibilities.map((task, i) => (
+                        <li key={i} className="flex items-start">
+                          <span className="text-[#0b4ea2] font-bold mr-2">•</span> {task}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Conclusion */}
+          <div className="text-center mt-12">
+            <h3 className="text-2xl font-bold text-[#0b4ea2]">Meet Us in Person!</h3>
+            <p className="text-gray-600 max-w-3xl mx-auto mt-4">
+              We look forward to welcoming you to Slovenské Vzdelávacie Centrum – South Manchester! Our team is here to support you and your children on their bilingual journey, helping them stay connected to Slovak language, education, and traditions.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Partners */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-[#0b4ea2]">Our Partners</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We're proud to collaborate with these organizations to amplify our impact.
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              At <strong>Slovenské Vzdelávacie Centrum – South Manchester</strong>, we believe in the power of collaboration. Thanks to the support of our partners, we can continue to provide high-quality Slovak language education, cultural events, and community programs for Slovak-speaking families in the UK.
             </p>
           </div>
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            {Array.from({ length: 8 }).map((_, index) => (
-              <div key={index} className="flex items-center justify-center p-4">
+            {[
+              { name: "Úrad pre Slovákov žijúcich v zahraničí", logo: "/partner-1.svg" },
+              { name: "ISEIA", logo: "/partner-2.svg" },
+              { name: "Association of Slovak Schools and Community Centers in the UK", logo: "/partner-3.svg" },
+              { name: "Univerzita Mateja Bela", logo: "/partner-4.svg" },
+              { name: "Morrisons", logo: "/partner-5.svg" },
+              { name: "Manchester College", logo: "/partner-6.svg" },
+              { name: "Porta134 Café", logo: "/partner-7.svg" },
+            ].map((partner, index) => (
+              <div key={index} className="flex flex-col items-center text-center p-4">
                 <Image
-                  src="/placeholder-logo.svg"
-                  alt={`Partner ${index + 1}`}
+                  src={partner.logo}
+                  alt={partner.name}
                   width={140}
                   height={70}
                   className="max-h-16 w-auto grayscale hover:grayscale-0 transition-all"
                 />
+                <p className="mt-2 text-gray-700 text-sm">{partner.name}</p>
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-700 max-w-3xl mx-auto">
+              We are always looking to expand our network and build new partnerships that align with our mission. If you or your organization are interested in supporting our work, please <strong>get in touch</strong>.
+            </p>
+          </div>
         </div>
       </section>
+
 
       <NewsletterSection />
     </>
