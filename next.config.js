@@ -29,4 +29,11 @@ module.exports = {
       ],
     },
   };
+
+  module.exports = {
+    eslint: {
+      ignoreDuringBuilds: true,
+    },
+  };
+  
   

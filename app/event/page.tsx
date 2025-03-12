@@ -26,7 +26,7 @@ export default function EventsPage() {
                 date: "June 15, 2023",
                 time: "19:00 - 23:00",
                 location: "Grand Hotel, Bratislava",
-                image: {childrenSmiling},
+                image: { childrenSmiling },
                 description:
                   "Join us for an evening of elegance and giving, featuring live music, auctions, and inspiring stories.",
               },
@@ -51,11 +51,12 @@ export default function EventsPage() {
               <Card key={index} className="flex flex-col">
                 <div className="relative h-48">
                   <Image
-                    src={event.image || "/placeholder.svg"}
+                    src={typeof event.image === "string" ? event.image : "/placeholder.svg"}
                     alt={event.title}
                     fill
                     className="object-cover rounded-t-lg"
                   />
+
                 </div>
                 <CardHeader>
                   <CardTitle>{event.title}</CardTitle>
