@@ -198,12 +198,12 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
             {[
-              { name: "Úrad pre Slovákov žijúcich v zahraničí", logo: "/partner-1.svg" },
-              { name: "ISEIA", logo: "/partner-2.svg" },
-              { name: "Association of Slovak Schools and Community Centers in the UK", logo: "/partner-3.svg" },
-              { name: "Univerzita Mateja Bela", logo: "/partner-4.svg" },
-              { name: "Morrisons", logo: "/partner-5.svg" },
-              { name: "Manchester College", logo: "/partner-6.svg" },
+              { name: "Úrad pre Slovákov žijúcich v zahraničí", logo: "" },
+              { name: "ISEIA", logo: "https://iseai.org/wp-content/uploads/2020/02/ISEAI-LOGO-Alt-240px.png" },
+              { name: "Association of Slovak Schools and Community Centers in the UK", logo: "https://lh6.googleusercontent.com/idJbNBVVVaoSVTt4BewxHWwq7qqmxnFi8Pt4suEg-bc_rB83XwJxPkx57JBfRIrmhM1Cch1T0kzonqP1a2-wkw=w16383" },
+              { name: "Univerzita Mateja Bela", logo: "https://www.umb.sk/cms/images/logo.png?v=1.0.1" },
+              { name: "Morrisons", logo: "https://www.cfroberts.co.uk/wp-content/uploads/2014/09/1280px-Morrisons_Logo.svg_-1024x609.png" },
+              { name: "Manchester College", logo: "https://b3044747.smushcdn.com/3044747/wp-content/uploads/2022/06/The-Manchester-College-1024x576.jpg?lossy=1&strip=1&webp=1" },
               { name: "Porta134 Café", logo: "/partner-7.svg" },
             ].map((partner, index) => (
               <div key={index} className="flex flex-col items-center text-center p-4">
