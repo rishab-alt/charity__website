@@ -37,7 +37,8 @@ export default function Header() {
           <Link href="/donate" className="hidden lg:block">
             <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">Donate Now</Button>
           </Link>
-          <ThemeToggle />
+         {/* <ThemeToggle />  */}        
+
           <Sheet>
             <SheetTrigger asChild className="lg:hidden">
               <Button variant="outline" size="icon">
