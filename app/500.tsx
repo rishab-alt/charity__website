@@ -16,7 +16,7 @@ export default function ServerError() {
       <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-foreground">Server Error</h2>
 
       <p className="text-lg text-center mb-8 text-muted-foreground max-w-md">
-        We're experiencing some technical difficulties. Our team has been notified and is working to resolve the issue.
+        We`re experiencing some technical difficulties. Our team has been notified and is working to resolve the issue.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4">

@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { ThemeToggle } from "@/components/theme-toggle"
+{/*import { ThemeToggle } from "@/components/theme-toggle"*/}
 
 const navItems = [
   { name: "Home", path: "/" },

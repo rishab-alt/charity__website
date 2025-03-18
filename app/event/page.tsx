@@ -169,7 +169,7 @@ export default function EventsPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Get Involved</h2>
             <p className="max-w-2xl mx-auto">
-              We're always looking for passionate volunteers to help make our events a success. Here are some ways you
+              We&apos;re always looking for passionate volunteers to help make our events a success. Here are some ways you
               can contribute:
             </p>
           </div>

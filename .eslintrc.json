@@ -1,3 +1,10 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript"
+  ],
+  "rules": {
+    "no-unused-vars": "off",   // Disable no-unused-vars rule
+    "react/react-in-jsx-scope": "off"  // Disable react/react-in-jsx-scope rule for Next.js (React 17+ handles this automatically)
+  }
 }

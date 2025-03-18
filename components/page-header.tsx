@@ -11,7 +11,6 @@ interface PageHeaderProps {
 export default function PageHeader({
   title,
   description,
-  backgroundImage = "/placeholder.svg?height=400&width=1600",
 }: PageHeaderProps) {
   return (
     <section className="relative">

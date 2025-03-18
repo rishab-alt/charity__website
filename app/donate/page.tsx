@@ -36,9 +36,10 @@ export default function DonatePage() {
                   <div>
                     <h3 className="font-bold mb-1">Transparent Use of Funds</h3>
                     <p className="text-gray-600">
-                      We're committed to transparency. 90% of all donations go directly to our projects, with only 10%
+                      We&apos;re committed to transparency. 90% of all donations go directly to our projects, with only 10%
                       used for administrative costs.
                     </p>
+
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -46,7 +47,7 @@ export default function DonatePage() {
                   <div>
                     <h3 className="font-bold mb-1">Tax-Deductible</h3>
                     <p className="text-gray-600">
-                      All donations are tax-deductible. You'll receive a receipt for your records.
+                      All donations are tax-deductible. You&apos;ll receive a receipt for your records.
                     </p>
                   </div>
                 </div>

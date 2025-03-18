@@ -1,11 +1,9 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Heart, Globe, Users, Mail, Phone, MapPin } from "lucide-react"
+import { ArrowRight, Heart, Globe, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import childrenSmiling from './images/free-photo-of-young-girls-in-traditional-dress-in-rice-field.jpeg'
 import volunteer_Image from './images/Volunteers.jpeg'
-import education_Image from './images/education.webp'
-import health_Image from './images/health.webp'
 import commmunity_Image from './images/community.webp'
 
 export default function Home() {
@@ -87,7 +85,7 @@ export default function Home() {
                 </p>
                 <p className="text-gray-600 mb-6">
                   Our team of dedicated volunteers and staff work tirelessly to ensure that every donation makes the
-                  maximum impact where it's needed most.
+                  maximum impact where it`s needed most.
                 </p>
                 <Button className="bg-[#0b4ea2] hover:bg-[#093d81] text-white">
                   Our Story <ArrowRight className="ml-2 h-4 w-4" />

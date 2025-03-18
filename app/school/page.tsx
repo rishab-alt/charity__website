@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { CalendarIcon, CheckCircle, Download, ExternalLink, FileText, Info } from "lucide-react"
+import { CalendarIcon, CheckCircle, Download,  Info } from "lucide-react"
 import PageHeader from "@/components/page-header"
 import NewsletterSection from "@/components/newsletter-section"
 
