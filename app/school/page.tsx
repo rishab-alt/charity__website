@@ -11,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { CalendarIcon, CheckCircle, Download,  Info } from "lucide-react"
 import PageHeader from "@/components/page-header"
 import NewsletterSection from "@/components/newsletter-section"
+import slovak_image_3 from '../images/Slovak_Image_3.jpg'
 
 export default function SchoolPage() {
   return (
@@ -71,9 +72,9 @@ export default function SchoolPage() {
                 </div>
               </div>
             </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
+            <div className="relative h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src={slovak_image_3}
                 alt="Students learning Slovak"
                 fill
                 className="object-cover"

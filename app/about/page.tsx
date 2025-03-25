@@ -2,7 +2,7 @@ import Image from "next/image"
 import PageHeader from "@/components/page-header"
 import NewsletterSection from "@/components/newsletter-section"
 import { CheckCircle } from "lucide-react"
-import childrenSmiling from '../images/free-photo-of-young-girls-in-traditional-dress-in-rice-field.jpeg'
+import slovak_image_1 from '../images/Slovak_Image_1.jpg'
 
 export default function AboutPage() {
   return (
@@ -49,7 +49,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src={childrenSmiling}
+                src={slovak_image_1}
                 alt="Our mission in action"
                 fill
                 className="object-cover"

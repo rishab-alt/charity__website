@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { CheckCircle, CreditCard, Calendar, Lock } from "lucide-react"
 import PageHeader from "@/components/page-header"
+import slovak_image_1 from '../images/Slovak_Image_2.jpg'
 
 export default function DonatePage() {
   return (
@@ -86,7 +87,7 @@ export default function DonatePage() {
 
               <div className="relative h-[300px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=300&width=600"
+                  src={slovak_image_1}
                   alt="Children in a classroom"
                   fill
                   className="object-cover"

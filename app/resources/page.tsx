@@ -6,6 +6,7 @@ import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/comp
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import PageHeader from "@/components/page-header"
 import NewsletterSection from "@/components/newsletter-section"
+import slovak_image_3 from '../images/Slovak_Image_3.jpg'
 
 export default function ResourcesPage() {
   return (
@@ -24,19 +25,19 @@ export default function ResourcesPage() {
               {
                 title: "Slovak Language Basics",
                 description: "Learn the fundamentals of the Slovak language with our comprehensive guide.",
-                image: "/placeholder.svg?height=200&width=300",
+                image: slovak_image_3,
                 link: "#",
               },
               {
                 title: "Slovak Culture and Traditions",
                 description: "Explore the rich cultural heritage and traditions of Slovakia.",
-                image: "/placeholder.svg?height=200&width=300",
+                image: slovak_image_3,
                 link: "#",
               },
               {
                 title: "Volunteering 101",
                 description: "Everything you need to know about volunteering with our organization.",
-                image: "/placeholder.svg?height=200&width=300",
+                image: slovak_image_3,
                 link: "#",
               },
             ].map((resource, index) => (

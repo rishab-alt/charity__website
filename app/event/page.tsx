@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import PageHeader from "@/components/page-header"
 import NewsletterSection from "@/components/newsletter-section"
-import childrenSmiling from '../images/free-photo-of-young-girls-in-traditional-dress-in-rice-field.jpeg'
+import slovak_image_2 from '../images/Slovak_Image_2.jpg'
 
 export default function EventsPage() {
   return (
@@ -20,43 +20,22 @@ export default function EventsPage() {
         <div className="container">
           <h2 className="text-3xl font-bold mb-8 text-[#0b4ea2]">Upcoming Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Annual Charity Gala",
-                date: "June 15, 2023",
-                time: "19:00 - 23:00",
-                location: "Grand Hotel, Bratislava",
-                image: { childrenSmiling },
-                description:
-                  "Join us for an evening of elegance and giving, featuring live music, auctions, and inspiring stories.",
-              },
-              {
-                title: "Summer Volunteer Day",
-                date: "July 8, 2023",
-                time: "10:00 - 16:00",
-                location: "City Park, Košice",
-                image: "/placeholder.svg?height=400&width=600",
-                description: "Help us clean up and beautify our local park. All ages welcome!",
-              },
-              {
-                title: "Education Fundraiser",
-                date: "August 20, 2023",
-                time: "14:00 - 18:00",
-                location: "Community Center, Žilina",
-                image: "/placeholder.svg?height=400&width=600",
-                description:
-                  "Support our education initiatives with a fun-filled afternoon of activities and performances.",
-              },
-            ].map((event, index) => (
+            {[{
+              title: "Annual Charity Gala",
+              date: "June 15, 2023",
+              time: "19:00 - 23:00",
+              location: "Grand Hotel, Bratislava",
+              image: slovak_image_2, // Using the imported image
+              description: "Join us for an evening of elegance and giving, featuring live music, auctions, and inspiring stories.",
+            }].map((event, index) => (
               <Card key={index} className="flex flex-col">
                 <div className="relative h-48">
                   <Image
-                    src={typeof event.image === "string" ? event.image : "/placeholder.svg"}
+                    src={event.image} // Reference imported image
                     alt={event.title}
                     fill
                     className="object-cover rounded-t-lg"
                   />
-
                 </div>
                 <CardHeader>
                   <CardTitle>{event.title}</CardTitle>
@@ -84,13 +63,6 @@ export default function EventsPage() {
               </Card>
             ))}
           </div>
-          <div className="mt-8 text-center">
-            <Button asChild variant="outline">
-              <Link href="#" className="text-[#0b4ea2]">
-                View All Events <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -99,25 +71,28 @@ export default function EventsPage() {
         <div className="container">
           <h2 className="text-3xl font-bold mb-8 text-[#0b4ea2]">Past Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Spring Charity Run",
-                date: "April 22, 2023",
-                participants: 500,
-                amountRaised: "€15,000",
-                image: "/placeholder.svg?height=300&width=400",
-              },
-              {
-                title: "Youth Leadership Workshop",
-                date: "May 5, 2023",
-                participants: 100,
-                amountRaised: "N/A",
-                image: "/placeholder.svg?height=300&width=400",
-              },
-            ].map((event, index) => (
+            {[{
+              title: "Spring Charity Run",
+              date: "April 22, 2023",
+              participants: 500,
+              amountRaised: "€15,000",
+              image: slovak_image_2, // Using the same imported image for past events
+            },
+            {
+              title: "Youth Leadership Workshop",
+              date: "May 5, 2023",
+              participants: 100,
+              amountRaised: "N/A",
+              image: slovak_image_2, // Using the same imported image
+            }].map((event, index) => (
               <div key={index} className="flex bg-white rounded-lg overflow-hidden shadow-sm">
                 <div className="relative w-1/3">
-                  <Image src={event.image || "/placeholder.svg"} alt={event.title} fill className="object-cover" />
+                  <Image
+                    src={event.image} // Using the imported image
+                    alt={event.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="w-2/3 p-6">
                   <h3 className="text-xl font-bold mb-2">{event.title}</h3>
@@ -174,20 +149,18 @@ export default function EventsPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Event Planning",
-                description: "Help us organize and coordinate our charity events.",
-              },
-              {
-                title: "Day-of Volunteer",
-                description: "Assist with setup, registration, and various tasks during events.",
-              },
-              {
-                title: "Fundraising",
-                description: "Support our cause by helping us raise funds for our initiatives.",
-              },
-            ].map((role, index) => (
+            {[{
+              title: "Event Planning",
+              description: "Help us organize and coordinate our charity events.",
+            },
+            {
+              title: "Day-of Volunteer",
+              description: "Assist with setup, registration, and various tasks during events.",
+            },
+            {
+              title: "Fundraising",
+              description: "Support our cause by helping us raise funds for our initiatives.",
+            }].map((role, index) => (
               <div key={index} className="bg-white text-gray-800 p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-2">{role.title}</h3>
                 <p className="mb-4">{role.description}</p>
@@ -202,4 +175,3 @@ export default function EventsPage() {
     </>
   )
 }
-

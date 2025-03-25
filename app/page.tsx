@@ -2,9 +2,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Heart, Globe, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import childrenSmiling from './images/free-photo-of-young-girls-in-traditional-dress-in-rice-field.jpeg'
-import volunteer_Image from './images/Volunteers.jpeg'
-import commmunity_Image from './images/community.webp'
+import slovak_image_2 from './images/Slovak_Image_2.jpg'
+import slovak_image_1 from './images/Slovak_Image_1.jpg'
 
 export default function Home() {
   return (
@@ -15,7 +14,7 @@ export default function Home() {
         <section className="relative h-screen">
           <div className="absolute inset-0 bg-gradient-to-r from-[#0b4ea2]/80 to-[#0b4ea2]/60 z-10"></div>
           <Image
-            src={childrenSmiling}
+            src={slovak_image_2}
             alt="Children smiling"
             layout="fill"
             objectFit="cover"
@@ -93,7 +92,7 @@ export default function Home() {
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src={volunteer_Image}
+                  src={slovak_image_1}
                   alt="Team of volunteers"
                   fill
                   className="object-cover"
@@ -141,7 +140,7 @@ export default function Home() {
               {/* Image Section */}
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src={commmunity_Image}
+                  src={slovak_image_1}
                   alt="Children in a classroom"
                   fill
                   className="object-cover"

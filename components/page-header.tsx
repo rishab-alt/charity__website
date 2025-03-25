@@ -1,5 +1,5 @@
 import Image from "next/image"
-import childrenSmiling from '../app/images/free-photo-of-young-girls-in-traditional-dress-in-rice-field.jpeg'
+import slovak_image_1 from '../app/images/Slovak_Image_1.jpg'
 
 
 interface PageHeaderProps {
@@ -16,7 +16,7 @@ export default function PageHeader({
     <section className="relative">
       <div className="absolute inset-0 bg-gradient-to-r from-[#0b4ea2]/80 to-[#0b4ea2]/60 z-10"></div>
       <Image
-        src={childrenSmiling || "/placeholder.svg"}
+        src={slovak_image_1 || "/placeholder.svg"}
         alt={title}
         width={1600}
         height={400}
