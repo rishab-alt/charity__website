@@ -1,11 +1,50 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Clock } from "lucide-react"
-import PageHeader from "@/components/page-header"
-import NewsletterSection from "@/components/newsletter-section"
+"use client"; // This makes the component a Client Component
+
+import { useEffect, useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import PageHeader from "@/components/page-header";
+import NewsletterSection from "@/components/newsletter-section";
 
 export default function ContactPage() {
+  const mapContainerRef = useRef(null); // Ref to attach map to the DOM element
+  const googleMapsAPIKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY; // Access the API key from environment variables
+
+  // Function to load Google Maps script dynamically
+  const loadGoogleMapsScript = () => {
+    const script = document.createElement("script");
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${googleMapsAPIKey}&callback=initMap`;
+    script.async = true;
+    document.body.appendChild(script);
+  };
+
+  // Function to initialize the map
+  const initMap = () => {
+    const bratislavaLocation = { lat: 48.1482, lng: 17.1067 }; // Coordinates for Bratislava
+    
+    const map = new window.google.maps.Map(mapContainerRef.current, {
+      center: bratislavaLocation,
+      zoom: 14,
+    });
+
+    new window.google.maps.Marker({
+      position: bratislavaLocation,
+      map: map,
+      title: "SlovakAid Office",
+    });
+  };
+
+  useEffect(() => {
+    if (window.google) {
+      initMap(); // If Google Maps is already loaded, initialize map
+    } else {
+      window.initMap = initMap; // Make sure the callback function is accessible globally
+      loadGoogleMapsScript(); // Dynamically load Google Maps script
+    }
+  }, []);
+
   return (
     <>
       <PageHeader
@@ -108,7 +147,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map */}
+      {/* Map Section */}
       <section className="py-16 bg-gray-50">
         <div className="container">
           <div className="text-center mb-8">
@@ -119,10 +158,8 @@ export default function ContactPage() {
             </p>
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden border border-gray-200">
-            {/* This would be replaced with an actual map component in a real implementation */}
-            <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-              <p className="text-gray-500">Map of Bratislava showing SlovakAid office location</p>
-            </div>
+            {/* Google Map Container */}
+            <div ref={mapContainerRef} className="absolute inset-0"></div>
           </div>
         </div>
       </section>
@@ -135,39 +172,21 @@ export default function ContactPage() {
             <p className="text-gray-600">Find answers to common questions about contacting and working with us.</p>
           </div>
           <div className="space-y-6">
-            {[
-              {
-                question: "How quickly will you respond to my inquiry?",
-                answer:
-                  "We aim to respond to all inquiries within 1-2 business days. For urgent matters, please call our office directly.",
-              },
-              {
-                question: "Can I visit your office without an appointment?",
-                answer:
-                  "While we welcome visitors, we recommend scheduling an appointment to ensure that the appropriate staff member is available to meet with you.",
-              },
-              {
-                question: "How can I volunteer with SlovakAid?",
-                answer:
-                  "We're always looking for dedicated volunteers! Please fill out the contact form and specify your interest in volunteering, or email us directly at volunteer@slovakaid.org.",
-              },
-              {
-                question: "Do you offer internships?",
-                answer:
-                  "Yes, we offer internships for students and recent graduates. Please send your resume and a cover letter to internships@slovakaid.org.",
-              },
-            ].map((faq, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-lg font-bold mb-2">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            ))}
+            {[{ question: "How quickly will you respond to my inquiry?", answer: "We aim to respond to all inquiries within 1-2 business days..." },
+              { question: "Can I visit your office without an appointment?", answer: "While we welcome visitors, we recommend scheduling an appointment..." },
+              { question: "How can I volunteer with SlovakAid?", answer: "We're always looking for dedicated volunteers..." },
+              { question: "Do you offer internships?", answer: "Yes, we offer internships for students..." }]
+              .map((faq, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                  <h3 className="text-lg font-bold mb-2">{faq.question}</h3>
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
+              ))}
           </div>
         </div>
       </section>
 
       <NewsletterSection />
     </>
-  )
+  );
 }
-
