@@ -2,16 +2,90 @@ import Image from "next/image"
 import PageHeader from "@/components/page-header"
 import NewsletterSection from "@/components/newsletter-section"
 import { CheckCircle } from "lucide-react"
+
+//images 
 import slovak_image_1 from '../images/Slovak_Image_1.jpg'
+import logo1 from '../images/companies_logo/ASSC.jpg'
+import logo2 from '../images/companies_logo/ISEAI-LOGO.jpg'
+import logo3 from '../images/companies_logo/Morrisons_Logo.jpg'
+import logo4 from '../images/companies_logo/The-Manchester-College.jpg'
+import logo5 from '../images/companies_logo/UMB.jpg'
+import logo6 from '../images/companies_logo/uszz-logo.jpg'
 
 export default function AboutPage() {
+  const partners = [
+    { name: "Úrad pre Slovákov žijúcich v zahraničí", logo: logo6 },
+    { name: "ISEIA", logo: logo2 },
+    { name: "Association of Slovak Schools and Community Centers in the UK", logo: logo1 },
+    { name: "Univerzita Mateja Bela", logo: logo5 },
+    { name: "Morrisons", logo: logo3 },
+    { name: "Manchester College", logo: logo4 },
+    { name: "Porta134 Café", logo: "/partner-7.svg" },
+  ];
+
+  const leadershipTeam = [
+    {
+      name: "Mgr. Mária Mušutová",
+      role: "Co-Founder | Chair of the Charity | Trustee | Curriculum & Slovak Language Teaching Developer | Lead Teacher (AM Sessions)",
+      bio: "Originally from the Orava region in Slovakia, Mária has lived in Manchester for 17 years and holds a PGCE in Modern Foreign Languages from Manchester Metropolitan University. She teaches Spanish and French at a secondary school while also offering private Slovak lessons and translation services.",
+      quote: "Slovenské Vzdelávacie Centrum - South Manchester allows us to unite the Slovak community, share educational and cultural opportunities, and build lifelong friendships with those who cherish our traditions.",
+      responsibilities: [
+        "Chairing the charity and overseeing its development",
+        "Developing the Slovak language curriculum for all age groups",
+        "Leading and teaching the AM session for mixed-ability students (ages 4+ to adults)",
+        "Managing administrative tasks and charity operations",
+        "Organising cultural events, trips, and workshops",
+      ],
+      image: "/images/maria.jpg",
+    },
+    {
+      name: "Mgr. Denisa Amini",
+      role: "Co-Founder | Trustee | Advisor for Families Moving to Slovakia | International School Educator & Project Coordinator",
+      bio: "Originally from Prešov, Denisa lived in Manchester for nearly 20 years before moving back to Slovakia, where she now works at an International School in Košice. With a degree in History and Civics Education, she bridges the Slovak and UK education systems.",
+      quote: "I believe that Slovenské Vzdelávacie Centrum - South Manchester is more than just a school—it's a place where we can connect, support one another, and celebrate the traditions that are important for us and our children.",
+      responsibilities: [
+        "Advising families preparing to return to Slovakia",
+        "Supporting students transitioning between Slovak and UK education systems",
+        "Developing partnerships with Slovak schools and institutions",
+        "Creating projects that connect Slovak students abroad with schools in Slovakia",
+        "Introducing Slovak history in an engaging way",
+      ],
+      image: "/images/denisa.jpg",
+    },
+    {
+      name: "Ingrid Harandza",
+      role: "Co-Founder | Trustee | Early Years Educator | SEN Specialist | Creative & Cultural Programs",
+      bio: "Born in Rimavská Sobota, Ingrid has lived in Manchester for over 20 years. She is a qualified Early Years Educator and works as a teaching assistant in a UK primary school, focusing on young learners.",
+      quote: "I am excited that Slovenské Vzdelávacie Centrum - South Manchester allows me to combine my two passions—working with children and preserving our Slovak heritage—into a meaningful and supportive space for our community.",
+      responsibilities: [
+        "Providing specialized support for SEN students",
+        "Teaching Slovak to young children through play, music, and movement",
+        "Leading creative, literary, and sports activities",
+        "Organizing cultural events that bring Slovak traditions to life",
+      ],
+      image: "/images/ingrid.jpg",
+    },
+  ];
+
+  const supportTeam = [
+    {
+      name: "Zuzana Hanuliaková",
+      role: "Volunteer | Teaching Assistant | Social Media Coordinator",
+      bio: "Zuzana is a dedicated volunteer and mother of three, deeply passionate about Slovak culture and education. She plays a vital role in supporting teachers and students in the classroom, ensuring lessons run smoothly.",
+      responsibilities: [
+        "Assisting teachers and students in lessons as a teaching assistant",
+        "Managing social media content to keep families informed and engaged",
+        "Helping coordinate events and activities",
+      ],
+      image: "/images/zuzana.jpg",
+    },
+  ];
+
   return (
     <>
-
-      <PageHeader title="About Us" description="Learn about our mission, vision, and the team behind SlovakAid"
-
-
-
+      <PageHeader
+        title="About Us"
+        description="Learn about our mission, vision, and the team behind SlovakAid"
       />
 
       {/* Mission & Vision */}
@@ -21,12 +95,10 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-[#0b4ea2]">Our Mission & Vision</h2>
               <p className="text-gray-600 mb-4">
-                Founded in 2010, SlovakAid is dedicated to improving lives across Slovakia and neighboring countries. We
-                focus on education, healthcare, and community development.
+                Founded in 2010, SlovakAid is dedicated to improving lives across Slovakia and neighboring countries. We focus on education, healthcare, and community development.
               </p>
               <p className="text-gray-600 mb-6">
-                Our vision is a Slovakia where every person has access to quality education, healthcare, and
-                opportunities to thrive regardless of their background or circumstances.
+                Our vision is a Slovakia where every person has access to quality education, healthcare, and opportunities to thrive regardless of their background or circumstances.
               </p>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
@@ -73,52 +145,15 @@ export default function AboutPage() {
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-[#0b4ea2] text-center mb-6">Leadership Team</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Mgr. Mária Mušutová",
-                  role: "Co-Founder | Chair of the Charity | Trustee | Curriculum & Slovak Language Teaching Developer | Lead Teacher (AM Sessions)",
-                  bio: "Originally from the Orava region in Slovakia, Mária has lived in Manchester for 17 years and holds a PGCE in Modern Foreign Languages from Manchester Metropolitan University. She teaches Spanish and French at a secondary school while also offering private Slovak lessons and translation services.",
-                  quote: "Slovenské Vzdelávacie Centrum - South Manchester allows us to unite the Slovak community, share educational and cultural opportunities, and build lifelong friendships with those who cherish our traditions.",
-                  responsibilities: [
-                    "Chairing the charity and overseeing its development",
-                    "Developing the Slovak language curriculum for all age groups",
-                    "Leading and teaching the AM session for mixed-ability students (ages 4+ to adults)",
-                    "Managing administrative tasks and charity operations",
-                    "Organising cultural events, trips, and workshops",
-                  ],
-                  image: "/images/maria.jpg",
-                },
-                {
-                  name: "Mgr. Denisa Amini",
-                  role: "Co-Founder | Trustee | Advisor for Families Moving to Slovakia | International School Educator & Project Coordinator",
-                  bio: "Originally from Prešov, Denisa lived in Manchester for nearly 20 years before moving back to Slovakia, where she now works at an International School in Košice. With a degree in History and Civics Education, she bridges the Slovak and UK education systems.",
-                  quote: "I believe that Slovenské Vzdelávacie Centrum - South Manchester is more than just a school—it's a place where we can connect, support one another, and celebrate the traditions that are important for us and our children.",
-                  responsibilities: [
-                    "Advising families preparing to return to Slovakia",
-                    "Supporting students transitioning between Slovak and UK education systems",
-                    "Developing partnerships with Slovak schools and institutions",
-                    "Creating projects that connect Slovak students abroad with schools in Slovakia",
-                    "Introducing Slovak history in an engaging way",
-                  ],
-                  image: "/images/denisa.jpg",
-                },
-                {
-                  name: "Ingrid Harandza",
-                  role: "Co-Founder | Trustee | Early Years Educator | SEN Specialist | Creative & Cultural Programs",
-                  bio: "Born in Rimavská Sobota, Ingrid has lived in Manchester for over 20 years. She is a qualified Early Years Educator and works as a teaching assistant in a UK primary school, focusing on young learners.",
-                  quote: "I am excited that Slovenské Vzdelávacie Centrum - South Manchester allows me to combine my two passions—working with children and preserving our Slovak heritage—into a meaningful and supportive space for our community.",
-                  responsibilities: [
-                    "Providing specialized support for SEN students",
-                    "Teaching Slovak to young children through play, music, and movement",
-                    "Leading creative, literary, and sports activities",
-                    "Organizing cultural events that bring Slovak traditions to life",
-                  ],
-                  image: "/images/ingrid.jpg",
-                },
-              ].map((member, index) => (
+              {leadershipTeam.map((member, index) => (
                 <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                   <div className="relative h-64">
-                    <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+                    <Image
+                      src={member.image || "/placeholder.svg"}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div className="p-6 text-center">
                     <h3 className="text-xl font-bold text-[#0b4ea2]">{member.name}</h3>
@@ -142,22 +177,15 @@ export default function AboutPage() {
           <div>
             <h3 className="text-2xl font-bold text-[#0b4ea2] text-center mb-6">Support Team</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Zuzana Hanuliaková",
-                  role: "Volunteer | Teaching Assistant | Social Media Coordinator",
-                  bio: "Zuzana is a dedicated volunteer and mother of three, deeply passionate about Slovak culture and education. She plays a vital role in supporting teachers and students in the classroom, ensuring lessons run smoothly.",
-                  responsibilities: [
-                    "Assisting teachers and students in lessons as a teaching assistant",
-                    "Managing social media content to keep families informed and engaged",
-                    "Helping coordinate events and activities",
-                  ],
-                  image: "/images/zuzana.jpg",
-                },
-              ].map((member, index) => (
+              {supportTeam.map((member, index) => (
                 <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200">
                   <div className="relative h-64">
-                    <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+                    <Image
+                      src={member.image || "/placeholder.svg"}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div className="p-6 text-center">
                     <h3 className="text-xl font-bold text-[#0b4ea2]">{member.name}</h3>
@@ -197,18 +225,10 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            {[
-              { name: "Úrad pre Slovákov žijúcich v zahraničí", logo: "" },
-              { name: "ISEIA", logo: "https://iseai.org/wp-content/uploads/2020/02/ISEAI-LOGO-Alt-240px.png" },
-              { name: "Association of Slovak Schools and Community Centers in the UK", logo: "https://lh6.googleusercontent.com/idJbNBVVVaoSVTt4BewxHWwq7qqmxnFi8Pt4suEg-bc_rB83XwJxPkx57JBfRIrmhM1Cch1T0kzonqP1a2-wkw=w16383" },
-              { name: "Univerzita Mateja Bela", logo: "https://www.umb.sk/cms/images/logo.png?v=1.0.1" },
-              { name: "Morrisons", logo: "https://www.cfroberts.co.uk/wp-content/uploads/2014/09/1280px-Morrisons_Logo.svg_-1024x609.png" },
-              { name: "Manchester College", logo: "https://b3044747.smushcdn.com/3044747/wp-content/uploads/2022/06/The-Manchester-College-1024x576.jpg?lossy=1&strip=1&webp=1" },
-              { name: "Porta134 Café", logo: "/partner-7.svg" },
-            ].map((partner, index) => (
+            {partners.map((partner, index) => (
               <div key={index} className="flex flex-col items-center text-center p-4">
                 <Image
-                  src={partner.logo}
+                  src={partner.logo || "/placeholder.svg"}
                   alt={partner.name}
                   width={140}
                   height={70}
@@ -227,9 +247,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-
       <NewsletterSection />
     </>
-  )
+  );
 }
-
