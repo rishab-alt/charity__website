@@ -166,7 +166,7 @@ export default function AboutPage() {
                         </li>
                       ))}
                     </ul>
-                    <p className="italic text-gray-500 mt-4">"{member.quote}"</p>
+                    <p className="italic text-gray-500 mt-4">{member.quote}</p>
                   </div>
                 </div>
               ))}

@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin, Clock } from "lucide-react"
 import PageHeader from "@/components/page-header"
 import NewsletterSection from "@/components/newsletter-section"
+import GoogleMapComponent from '../../components/GoogleMap'
 
 export default function ContactPage() {
   return (
@@ -21,7 +22,7 @@ export default function ContactPage() {
               <h2 className="text-3xl font-bold mb-6 text-[#0b4ea2]">Get in Touch</h2>
               <p className="text-gray-600 mb-8">
                 Have questions or want to get involved? Reach out to us using the contact information below or fill out
-                the form. We'll get back to you as soon as possible.
+                the form. We`ll get back to you as soon as possible.
               </p>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -108,24 +109,22 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map */}
+      {/* Map Section */}
       <section className="py-16 bg-gray-50">
         <div className="container">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4 text-[#0b4ea2]">Our Location</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Visit our office in Bratislava. We're located in the city center, easily accessible by public
-              transportation.
+              Visit our office in Bratislava. We&apos;re located in the city center, easily accessible by public transportation.
             </p>
+
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden border border-gray-200">
-            {/* This would be replaced with an actual map component in a real implementation */}
-            <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-              <p className="text-gray-500">Map of Bratislava showing SlovakAid office location</p>
-            </div>
+            <GoogleMapComponent />
           </div>
         </div>
       </section>
+
 
       {/* FAQ */}
       <section className="py-16">
